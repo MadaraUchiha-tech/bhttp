@@ -1,15 +1,16 @@
 # BHTTP/1 — HTTP, in binary
 
 A fixed-header binary framing for HTTP semantics, with a server (`bserve`), a
-client (`bcurl`), and an independent conformance suite.
+client (`bcurl`), and a from-scratch conformance suite written as a second implementation of the spec.
 
-## Deliverables
+## What's inside
 
-| # | What | Where |
-|---|------|-------|
-| 1 | The spec (two pages) | [`docs/SPEC.pdf`](docs/SPEC.pdf) (source: `docs/spec.html`) |
-| 2 | The program | `src/` — `bserve.c`, `bcurl.c`, shared `proto.c`/`proto.h`; `Makefile` |
-| 3 | Annotated hexdump of one request + response | [`docs/HEXDUMP.pdf`](docs/HEXDUMP.pdf) (raw capture: `docs/capture.txt`) |
+| What | Where |
+|------|-------|
+| Protocol specification (two pages) | [`docs/SPEC.pdf`](docs/SPEC.pdf) (source: `docs/spec.html`) |
+| Reference implementation: server and client in C11, zero dependencies | `src/`: `bserve.c`, `bcurl.c`, shared `proto.c`/`proto.h`; `Makefile` |
+| Annotated hexdump of one full request and response | [`docs/HEXDUMP.pdf`](docs/HEXDUMP.pdf) (raw capture: `docs/capture.txt`) |
+| Conformance suite: 42 checks, a second implementation of the spec in Python | `tests/conformance.py` |
 
 ## The protocol in one screen
 
